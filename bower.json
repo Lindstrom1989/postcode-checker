@@ -1,0 +1,12 @@
+{
+  "name": "postcode-checker",
+  "version": "1.0.0",
+  "description": "postcode-checker",
+  "main": "postcode-checker.html",
+  "keywords": [
+    "polymer","web-components"
+  ],
+  "dependencies": {
+    "polymer": "*"
+  }
+}
