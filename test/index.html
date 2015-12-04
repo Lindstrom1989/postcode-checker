@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+  </head>
+  <body>
+    <script>
+      WCT.loadSuites([
+        'postcode-checker.html'
+      ]);
+    </script>
+  </body>
+</html>
+## /test/postcode-checker.html
+<!doctype html>
+<html>
+  <head>
+    <title>postcode-checker</title>
+    <script src="../../webcomponentsjs/webcomponents.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+    <script src="../../test-fixture/test-fixture-mocha.js"></script>
+    <link rel="import" href="../../polymer/polymer.html">
+
+    <link rel="import" href="../../test-fixture/test-fixture.html">
+    <link rel="import" href="../postcode-checker.html">
+  </head>
+  <body>
+    <test-fixture id="postcodeChecker">
+
+      <template>
+        <postcode-checker></postcode-checker>
+      </template>
+    </test-fixture>
+    <script>
+      suite('<postcode-checker>', function () {
+        var postcodeChecker;
+        postcodeChecker = fixture('postcodeChecker');
+        setup(function () {
+        });
+        teardown(function () {
+          //...
+        });
+        suite('basic usage', function () {
+          test('can be triggered with space', function(done) {
+            postcodeChecker.addEventListener('keydown', function() {
+              done();
+            });
+          });
+          test('can be clicked', function(done) {
+            postcodeChecker.addEventListener('click', function() {
+              done();
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
